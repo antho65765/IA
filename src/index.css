@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --app-font-scale: 1rem;
+  }
+
+  body {
+    font-size: var(--app-font-scale);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  /* High focus visibility for keyboard navigation */
+  *:focus-visible {
+    outline: 3px solid #2563eb !important;
+    outline-offset: 2px !important;
+  }
+
+  /* Dyslexia-friendly font mode */
+  .font-dyslexic {
+    font-family: 'OpenDyslexic', 'Lexend', 'Comic Sans MS', 'Trebuchet MS', sans-serif !important;
+    letter-spacing: 0.05em !important;
+    word-spacing: 0.12em !important;
+  }
+
+  /* Reading guide line */
+  .reading-guide-line {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    height: 32px;
+    background: rgba(254, 240, 138, 0.22);
+    border-top: 2px dashed rgba(202, 138, 4, 0.4);
+    border-bottom: 2px dashed rgba(202, 138, 4, 0.4);
+    pointer-events: none;
+    z-index: 9999;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.05);
+  }
+
+  /* High contrast mode enhancements */
+  .high-contrast {
+    filter: contrast(1.15);
+  }
+
+  .high-contrast button {
+    border-width: 2px !important;
+  }
+}
+
